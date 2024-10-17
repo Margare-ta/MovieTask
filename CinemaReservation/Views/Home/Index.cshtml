@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Reservation Information";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Type your reservation info here:</h1>
+    <form method="post" enctype="multipart/form-data" asp-asp-controller="Home" asp-action="Index">
+        <div class="mb-3">
+            <input type="text" name="Name" class="form-control" placeholder="Full Name" value=@ViewBag.Name/> <br />
+            <input type="text" name="Email" class="form-control" placeholder="example@email.com" value=@ViewBag.Email /><br />
+            <input type="datetime-local" name="party-date" min="2024-10-17T08:30" class="form-control" /><br />
+            <input type="number" name="GuestsNumber" class="form-control" placeholder="Guests number (1-10)" value=@ViewBag.GuestsNumber /><br />
+            <input type="submit" class="form-control btn btn-outline-primary" value="Submit" /><br />
+        </div>
+        
+    </form>
+    <p>@ViewBag.Message</p>
+    
+    
+</div>
